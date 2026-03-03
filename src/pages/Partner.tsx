@@ -19,7 +19,7 @@ interface MenuItemProps {
 function MenuCard({ title, description, icon: Icon, color, bgColor, path }: MenuItemProps) {
   const isExternal = path?.startsWith('http');
   const CardWrapper = path ? (isExternal ? 'a' : Link) : 'div';
-  const props = path ? (isExternal ? { href: path, target: "_blank", rel: "noopener noreferrer" } : { to: path }) : {};
+  const props = path ? (isExternal ? { href: path } : { to: path }) : {};
 
   return (
     // @ts-ignore

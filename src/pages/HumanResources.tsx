@@ -1,13 +1,12 @@
-import React from 'react';
-import { 
-  Users, 
-  ClipboardList, 
-  UserPlus, 
-  DollarSign, 
-  Award, 
-  Target, 
-  ListTodo, 
-  CalendarCheck 
+import {
+  Award,
+  CalendarCheck,
+  ClipboardList,
+  DollarSign,
+  ListTodo,
+  Target,
+  UserPlus,
+  Users
 } from 'lucide-react';
 import { Link } from 'react-router-dom';
 
@@ -79,8 +78,8 @@ export function HumanResources() {
 
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-6">
         {hrModules.map((module, index) => (
-          <Link 
-            key={module.title} 
+          <Link
+            key={module.title}
             to={module.path}
             className="bg-white p-4 rounded-xl border border-slate-100 shadow-sm hover:shadow-md transition-all duration-300 group flex items-center gap-4"
           >

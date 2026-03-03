@@ -1,20 +1,18 @@
-import React from 'react';
-import { NavLink } from 'react-router-dom';
 import {
-  LayoutDashboard,
-  Users,
-  Wallet,
-  Package,
-  Settings,
   Bot,
-  Copyright,
+  Handshake,
+  LayoutDashboard,
+  Package,
   PanelLeftClose,
   PanelLeftOpen,
+  Settings,
   UserCircle,
-  Handshake
+  Users,
+  Wallet
 } from 'lucide-react';
-import { cn } from '../lib/utils';
+import { NavLink } from 'react-router-dom';
 import { useSettings } from '../contexts/SettingsContext';
+import { cn } from '../lib/utils';
 
 interface SidebarProps {
   isOpen: boolean;
@@ -41,8 +39,8 @@ export function Sidebar({ isOpen, toggleSidebar, isMobile = false }: SidebarProp
       className={cn(
         "fixed left-0 top-0 z-40 h-screen bg-white border-r border-slate-200 transition-all duration-300 flex flex-col",
         // Mobile: overlay behavior with full width, Desktop: always visible
-        isMobile 
-          ? (isOpen ? "w-64 translate-x-0" : "w-64 -translate-x-full") 
+        isMobile
+          ? (isOpen ? "w-64 translate-x-0" : "w-64 -translate-x-full")
           : (isOpen ? "w-64" : "w-20")
       )}
     >

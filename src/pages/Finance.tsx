@@ -1,31 +1,31 @@
-import React from 'react';
 import {
+  ArrowLeft,
+  ArrowLeftRight,
+  Banknote,
+  BarChart3,
   BookOpen,
   Calculator,
   CalendarRange,
-  RefreshCw,
-  FileText,
-  Settings,
-  HandCoins,
+  CheckCircle2,
   CreditCard,
-  Wallet,
-  Banknote,
-  ArrowLeftRight,
-  PieChart,
-  Share2,
-  TrendingUp,
-  BarChart3,
+  FileSpreadsheet,
+  FileText,
+  HandCoins,
+  HelpCircle,
   Landmark,
   LineChart,
-  CheckCircle2,
-  FileSpreadsheet,
+  PieChart,
   Receipt,
-  ArrowLeft,
+  RefreshCw,
   Search,
+  Settings,
+  Share2,
   Star,
-  HelpCircle
+  TrendingUp,
+  Wallet
 } from 'lucide-react';
-import { useNavigate } from 'react-router-dom';
+import React from 'react';
+import { Link, useNavigate } from 'react-router-dom';
 
 interface FinanceItemProps {
   title: string;
@@ -36,9 +36,13 @@ interface FinanceItemProps {
   key?: string | React.Key;
 }
 
-function FinanceCard({ title, description, icon: Icon, color, bgColor }: FinanceItemProps) {
+function FinanceCard({ title, description, icon: Icon, color, bgColor, path }: FinanceItemProps & { path?: string }) {
+  const CardWrapper = path ? Link : 'div';
+  const props = path ? { to: path } : {};
+
   return (
-    <div className="bg-white p-4 rounded-xl border border-slate-200 shadow-sm hover:shadow-md transition-all duration-300 group flex items-start gap-4 relative cursor-pointer">
+    // @ts-ignore
+    <CardWrapper {...props} className="bg-white p-4 rounded-xl border border-slate-200 shadow-sm hover:shadow-md transition-all duration-300 group flex items-start gap-4 relative cursor-pointer">
       <div className={`${bgColor} ${color} w-10 h-10 rounded-lg flex items-center justify-center shrink-0`}>
         <Icon size={20} />
       </div>
@@ -51,14 +55,14 @@ function FinanceCard({ title, description, icon: Icon, color, bgColor }: Finance
         </p>
       </div>
       <div className="flex flex-col gap-2 absolute right-3 top-3 text-slate-300">
-        <button className="hover:text-yellow-400 transition-colors">
+        <button className="hover:text-yellow-400 transition-colors" onClick={(e) => e.preventDefault()}>
           <Star size={14} />
         </button>
-        <button className="hover:text-blue-400 transition-colors">
+        <button className="hover:text-blue-400 transition-colors" onClick={(e) => e.preventDefault()}>
           <HelpCircle size={14} />
         </button>
       </div>
-    </div>
+    </CardWrapper>
   );
 }
 

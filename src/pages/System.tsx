@@ -1,19 +1,19 @@
-import React from 'react';
 import {
-  Building2,
-  ListOrdered,
-  Briefcase,
-  ClipboardList,
-  Users,
-  Building,
-  MapPin,
-  Shield,
-  DatabaseBackup,
-  Monitor,
   ArrowLeft,
+  Briefcase,
+  Building,
+  Building2,
+  ChevronRight,
+  ClipboardList,
+  DatabaseBackup,
+  ListOrdered,
+  MapPin,
+  Monitor,
   Search,
-  ChevronRight
+  Shield,
+  Users
 } from 'lucide-react';
+import React from 'react';
 import { Link, useNavigate } from 'react-router-dom';
 
 interface SystemItemProps {
@@ -25,9 +25,13 @@ interface SystemItemProps {
   hasArrow?: boolean;
 }
 
-const SystemCard: React.FC<SystemItemProps> = ({ title, description, icon: Icon, color, bgColor, hasArrow }) => {
+const SystemCard: React.FC<SystemItemProps & { path?: string }> = ({ title, description, icon: Icon, color, bgColor, hasArrow, path }) => {
+  const CardWrapper = path ? Link : 'div';
+  const props = path ? { to: path } : {};
+
   return (
-    <div className="bg-white p-4 rounded-xl border border-slate-200 shadow-sm hover:shadow-md transition-all duration-300 group flex items-center gap-4 cursor-pointer">
+    // @ts-ignore
+    <CardWrapper {...props} className="bg-white p-4 rounded-xl border border-slate-200 shadow-sm hover:shadow-md transition-all duration-300 group flex items-center gap-4 cursor-pointer">
       <div className={`${bgColor} ${color} w-12 h-12 rounded-xl flex items-center justify-center shrink-0`}>
         <Icon size={24} strokeWidth={1.5} />
       </div>
@@ -42,7 +46,7 @@ const SystemCard: React.FC<SystemItemProps> = ({ title, description, icon: Icon,
       {hasArrow && (
         <ChevronRight size={20} className="text-blue-500" />
       )}
-    </div>
+    </CardWrapper>
   );
 }
 
@@ -124,6 +128,7 @@ export function System() {
                   color={item.color}
                   bgColor={item.bgColor}
                   hasArrow={item.hasArrow}
+                  path={(item as any).path}
                 />
               ))}
             </div>
