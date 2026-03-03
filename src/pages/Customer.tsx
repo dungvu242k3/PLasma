@@ -6,6 +6,7 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 
 interface MenuItemProps {
+  key?: React.Key;
   title: string;
   description: string;
   icon: React.ElementType;
@@ -44,7 +45,7 @@ const customerMenuItems = [
     icon: ShoppingCart,
     color: 'text-blue-600',
     bgColor: 'bg-blue-50',
-    path: 'https://tableplasma.vercel.app/danh-sach-don-hang'
+    path: 'https://plasma-vn.vercel.app/danh-sach-don-hang'
   },
   {
     title: 'Danh sách khách hàng',
@@ -52,7 +53,7 @@ const customerMenuItems = [
     icon: Users,
     color: 'text-purple-600',
     bgColor: 'bg-purple-50',
-    path: 'https://tableplasma.vercel.app/khach-hang'
+    path: 'https://plasma-vn.vercel.app/khach-hang'
   }
 ];
 

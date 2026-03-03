@@ -1,13 +1,14 @@
-import React from 'react';
-import { 
+import {
   Cpu,
+  Database,
   Package,
-  Warehouse,
-  Database
+  Warehouse
 } from 'lucide-react';
+import React from 'react';
 import { Link } from 'react-router-dom';
 
 interface MenuItemProps {
+  key?: React.Key;
   title: string;
   description: string;
   icon: React.ElementType;
@@ -17,12 +18,13 @@ interface MenuItemProps {
 }
 
 function MenuCard({ title, description, icon: Icon, color, bgColor, path }: MenuItemProps) {
-  const CardWrapper = path ? Link : 'div';
-  const props = path ? { to: path } : {};
+  const isExternal = path?.startsWith('http');
+  const CardWrapper = path ? (isExternal ? 'a' : Link) : 'div';
+  const props = path ? (isExternal ? { href: path, target: "_blank", rel: "noopener noreferrer" } : { to: path }) : {};
 
   return (
     // @ts-ignore
-    <CardWrapper {...props} className="bg-white p-4 rounded-xl border border-slate-200 shadow-sm hover:shadow-md transition-all duration-300 group flex items-start gap-4 relative h-full block w-full text-left">
+    <CardWrapper {...props} className="bg-white p-4 rounded-xl border border-slate-200 shadow-sm hover:shadow-md transition-all duration-300 group flex items-start gap-4 relative h-full w-full text-left">
       <div className={`${bgColor} ${color} w-12 h-12 rounded-xl flex items-center justify-center shrink-0`}>
         <Icon size={24} strokeWidth={1.5} />
       </div>
@@ -45,7 +47,7 @@ const logisticsModules = [
     icon: Cpu,
     color: 'text-orange-600',
     bgColor: 'bg-orange-50',
-    path: '/danh-sach-may'
+    path: 'https://plasma-vn.vercel.app/danh-sach-may'
   },
   {
     title: 'Danh sách bình',
@@ -53,7 +55,7 @@ const logisticsModules = [
     icon: Package,
     color: 'text-teal-600',
     bgColor: 'bg-teal-50',
-    path: '/danh-sach-binh'
+    path: 'https://plasma-vn.vercel.app/danh-sach-binh'
   },
   {
     title: 'Danh sách Kho',
@@ -61,7 +63,7 @@ const logisticsModules = [
     icon: Warehouse,
     color: 'text-slate-600',
     bgColor: 'bg-slate-100',
-    path: '/danh-sach-kho'
+    path: 'https://plasma-vn.vercel.app/danh-sach-kho'
   },
   {
     title: 'Danh sách nguồn vật tư',
@@ -69,7 +71,7 @@ const logisticsModules = [
     icon: Database,
     color: 'text-blue-600',
     bgColor: 'bg-blue-50',
-    path: '/danh-sach-nguon-vat-tu'
+    path: 'https://plasma-vn.vercel.app/thong-tin-vat-tu'
   }
 ];
 

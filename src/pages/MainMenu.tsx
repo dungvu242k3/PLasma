@@ -23,6 +23,7 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 
 interface MenuItemProps {
+  key?: React.Key;
   title: string;
   description: string;
   icon: React.ElementType;
@@ -64,7 +65,7 @@ const menuRows = [
       icon: ShoppingCart,
       color: 'text-blue-600',
       bgColor: 'bg-blue-50',
-      path: 'https://tableplasma.vercel.app/danh-sach-don-hang'
+      path: 'https://plasma-vn.vercel.app/danh-sach-don-hang'
     },
     {
       title: 'Thêm đơn hàng',
@@ -80,7 +81,7 @@ const menuRows = [
       icon: Users,
       color: 'text-purple-600',
       bgColor: 'bg-purple-50',
-      path: 'https://tableplasma.vercel.app/khach-hang'
+      path: 'https://plasma-vn.vercel.app/khach-hang'
     },
     {
       title: 'Thêm khách hàng',
@@ -96,7 +97,7 @@ const menuRows = [
       icon: Cpu,
       color: 'text-orange-600',
       bgColor: 'bg-orange-50',
-      path: 'https://tableplasma.vercel.app/danh-sach-may'
+      path: 'https://plasma-vn.vercel.app/danh-sach-may'
     }
   ],
   // Hàng 2: 5 items
@@ -115,7 +116,7 @@ const menuRows = [
       icon: Package,
       color: 'text-teal-600',
       bgColor: 'bg-teal-50',
-      path: 'https://tableplasma.vercel.app/danh-sach-binh'
+      path: 'https://plasma-vn.vercel.app/danh-sach-binh'
     },
     {
       title: 'Thêm bình mới',
@@ -131,7 +132,7 @@ const menuRows = [
       icon: Warehouse,
       color: 'text-slate-600',
       bgColor: 'bg-slate-100',
-      path: 'https://tableplasma.vercel.app/danh-sach-kho'
+      path: 'https://plasma-vn.vercel.app/danh-sach-kho'
     },
     {
       title: 'Thêm kho mới',
@@ -150,7 +151,7 @@ const menuRows = [
       icon: Truck,
       color: 'text-red-600',
       bgColor: 'bg-red-50',
-      path: 'https://tableplasma.vercel.app/danh-sach-dvvc'
+      path: 'https://plasma-vn.vercel.app/danh-sach-dvvc'
     },
     {
       title: 'Thêm ĐVVC mới',
@@ -166,7 +167,7 @@ const menuRows = [
       icon: Building2,
       color: 'text-violet-600',
       bgColor: 'bg-violet-50',
-      path: 'https://tableplasma.vercel.app/nha-cung-cap'
+      path: 'https://plasma-vn.vercel.app/nha-cung-cap'
     },
     {
       title: 'Thêm nhà cung cấp',
@@ -182,7 +183,7 @@ const menuRows = [
       icon: Receipt,
       color: 'text-lime-600',
       bgColor: 'bg-lime-50',
-      path: 'https://tableplasma.vercel.app/nhap-hang'
+      path: 'https://plasma-vn.vercel.app/nhap-hang'
     }
   ],
   // Hàng 4: 5 items
@@ -201,7 +202,7 @@ const menuRows = [
       icon: Database,
       color: 'text-blue-600',
       bgColor: 'bg-blue-50',
-      path: 'https://tableplasma.vercel.app/thong-tin-vat-tu'
+      path: 'https://plasma-vn.vercel.app/thong-tin-vat-tu'
     },
     {
       title: 'Thêm mới vật tư',
@@ -244,7 +245,7 @@ const menuRows = [
       icon: Gift,
       color: 'text-yellow-600',
       bgColor: 'bg-yellow-50',
-      path: 'https://tableplasma.vercel.app/danh-sach-khuyen-mai'
+      path: 'https://plasma-vn.vercel.app/danh-sach-khuyen-mai'
     },
     {
       title: 'Tạo mã khuyến mãi',
@@ -252,7 +253,7 @@ const menuRows = [
       icon: Sparkles,
       color: 'text-amber-600',
       bgColor: 'bg-amber-50',
-      path: 'https://tableplasma.vercel.app/tao-khuyen-mai'
+      path: 'https://plasma-vn.vercel.app/tao-khuyen-mai'
     }
   ]
 ];

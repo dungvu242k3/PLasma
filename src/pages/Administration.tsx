@@ -1,33 +1,33 @@
-import React from 'react';
 import {
-  Calendar,
-  ClipboardCheck,
-  FileText,
-  Target,
-  Banknote,
-  Scale,
-  Settings,
-  FileInput,
-  Send,
-  FileEdit,
   Archive,
-  FileSignature,
-  FolderKanban,
-  ListTodo,
-  BarChart,
-  Monitor,
   ArrowRightLeft,
-  ClipboardList,
-  Wrench,
+  Banknote,
+  BarChart,
   Calculator,
-  Car,
+  Calendar,
   CalendarClock,
   CalendarDays,
+  Car,
+  ClipboardCheck,
+  ClipboardList,
+  FileEdit,
+  FileInput,
+  FileSignature,
+  FileText,
+  FolderKanban,
   Fuel,
-  UserCog,
+  HelpCircle,
+  ListTodo,
+  Monitor,
+  Scale,
+  Send,
+  Settings,
   Star,
-  HelpCircle
+  Target,
+  UserCog,
+  Wrench
 } from 'lucide-react';
+import React from 'react';
 import { Link } from 'react-router-dom';
 
 interface AdminItemProps {
@@ -47,7 +47,7 @@ function AdminCard({ title, description, icon: Icon, color, bgColor, path }: Adm
 
   return (
     // @ts-ignore
-    <CardWrapper {...props} className="bg-white p-4 rounded-xl border border-slate-200 shadow-sm hover:shadow-md transition-all duration-300 group flex items-start gap-4 relative h-full block w-full text-left">
+    <CardWrapper {...props} className="bg-white p-4 rounded-xl border border-slate-200 shadow-sm hover:shadow-md transition-all duration-300 group flex items-start gap-4 relative h-full w-full text-left">
       <div className={`${bgColor} ${color} w-10 h-10 rounded-lg flex items-center justify-center shrink-0`}>
         <Icon size={20} />
       </div>
