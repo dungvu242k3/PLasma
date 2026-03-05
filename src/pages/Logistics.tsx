@@ -6,6 +6,7 @@ import {
 } from 'lucide-react';
 import React from 'react';
 import { Link } from 'react-router-dom';
+import { EXTERNAL_BASE_URL } from '../lib/constants';
 
 interface MenuItemProps {
   key?: React.Key;
@@ -47,7 +48,7 @@ const logisticsModules = [
     icon: Cpu,
     color: 'text-orange-600',
     bgColor: 'bg-orange-50',
-    path: 'https://plasma-vn.vercel.app/danh-sach-may'
+    path: `${EXTERNAL_BASE_URL}/danh-sach-may`
   },
   {
     title: 'Danh sách bình',
@@ -55,7 +56,7 @@ const logisticsModules = [
     icon: Package,
     color: 'text-teal-600',
     bgColor: 'bg-teal-50',
-    path: 'https://plasma-vn.vercel.app/danh-sach-binh'
+    path: `${EXTERNAL_BASE_URL}/danh-sach-binh`
   },
   {
     title: 'Danh sách Kho',
@@ -63,7 +64,7 @@ const logisticsModules = [
     icon: Warehouse,
     color: 'text-slate-600',
     bgColor: 'bg-slate-100',
-    path: 'https://plasma-vn.vercel.app/danh-sach-kho'
+    path: `${EXTERNAL_BASE_URL}/danh-sach-kho`
   },
   {
     title: 'Danh sách nguồn vật tư',
@@ -71,7 +72,7 @@ const logisticsModules = [
     icon: Database,
     color: 'text-blue-600',
     bgColor: 'bg-blue-50',
-    path: 'https://plasma-vn.vercel.app/thong-tin-vat-tu'
+    path: `${EXTERNAL_BASE_URL}/thong-tin-vat-tu`
   }
 ];
 

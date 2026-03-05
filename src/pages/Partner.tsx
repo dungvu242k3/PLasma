@@ -5,6 +5,7 @@ import {
 } from 'lucide-react';
 import React from 'react';
 import { Link } from 'react-router-dom';
+import { EXTERNAL_BASE_URL } from '../lib/constants';
 
 interface MenuItemProps {
   key?: React.Key;
@@ -46,7 +47,7 @@ const partnerMenuItems = [
     icon: Truck,
     color: 'text-red-600',
     bgColor: 'bg-red-50',
-    path: 'https://plasma-vn.vercel.app/danh-sach-dvvc'
+    path: `${EXTERNAL_BASE_URL}/danh-sach-dvvc`
   },
   {
     title: 'Danh sách nhà cung cấp',
@@ -54,7 +55,7 @@ const partnerMenuItems = [
     icon: Building2,
     color: 'text-violet-600',
     bgColor: 'bg-violet-50',
-    path: 'https://plasma-vn.vercel.app/nha-cung-cap'
+    path: `${EXTERNAL_BASE_URL}/nha-cung-cap`
   },
   {
     title: 'Nhập hàng từ NCC',
@@ -62,7 +63,7 @@ const partnerMenuItems = [
     icon: Receipt,
     color: 'text-lime-600',
     bgColor: 'bg-lime-50',
-    path: 'https://plasma-vn.vercel.app/nhap-hang'
+    path: `${EXTERNAL_BASE_URL}/nhap-hang`
   }
 ];
 

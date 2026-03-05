@@ -20,6 +20,7 @@ import {
 } from 'lucide-react';
 import React from 'react';
 import { Link } from 'react-router-dom';
+import { EXTERNAL_BASE_URL } from '../lib/constants';
 
 interface MenuItemProps {
   key?: React.Key;
@@ -64,7 +65,7 @@ const menuRows = [
       icon: ShoppingCart,
       color: 'text-blue-600',
       bgColor: 'bg-blue-50',
-      path: 'https://plasma-vn.vercel.app/danh-sach-don-hang'
+      path: `${EXTERNAL_BASE_URL}/danh-sach-don-hang`
     },
     {
       title: 'Danh sách khách hàng',
@@ -72,7 +73,7 @@ const menuRows = [
       icon: Users,
       color: 'text-purple-600',
       bgColor: 'bg-purple-50',
-      path: 'https://plasma-vn.vercel.app/khach-hang'
+      path: `${EXTERNAL_BASE_URL}/khach-hang`
     }
   ],
   // Hàng 2: Kho vận (4 items)
@@ -83,7 +84,7 @@ const menuRows = [
       icon: Cpu,
       color: 'text-orange-600',
       bgColor: 'bg-orange-50',
-      path: 'https://plasma-vn.vercel.app/danh-sach-may'
+      path: `${EXTERNAL_BASE_URL}/danh-sach-may`
     },
     {
       title: 'Danh sách bình',
@@ -91,7 +92,7 @@ const menuRows = [
       icon: Package,
       color: 'text-teal-600',
       bgColor: 'bg-teal-50',
-      path: 'https://plasma-vn.vercel.app/danh-sach-binh'
+      path: `${EXTERNAL_BASE_URL}/danh-sach-binh`
     },
     {
       title: 'Danh sách Kho',
@@ -99,7 +100,7 @@ const menuRows = [
       icon: Warehouse,
       color: 'text-slate-600',
       bgColor: 'bg-slate-100',
-      path: 'https://plasma-vn.vercel.app/danh-sach-kho'
+      path: `${EXTERNAL_BASE_URL}/danh-sach-kho`
     },
     {
       title: 'Danh sách nguồn vật tư',
@@ -107,7 +108,7 @@ const menuRows = [
       icon: Database,
       color: 'text-blue-600',
       bgColor: 'bg-blue-50',
-      path: 'https://plasma-vn.vercel.app/thong-tin-vat-tu'
+      path: `${EXTERNAL_BASE_URL}/thong-tin-vat-tu`
     }
   ],
   // Hàng 3: Đối tác (3 items)
@@ -118,7 +119,7 @@ const menuRows = [
       icon: Truck,
       color: 'text-red-600',
       bgColor: 'bg-red-50',
-      path: 'https://plasma-vn.vercel.app/danh-sach-dvvc'
+      path: `${EXTERNAL_BASE_URL}/danh-sach-dvvc`
     },
     {
       title: 'Danh sách nhà cung cấp',
@@ -126,7 +127,7 @@ const menuRows = [
       icon: Building2,
       color: 'text-violet-600',
       bgColor: 'bg-violet-50',
-      path: 'https://plasma-vn.vercel.app/nha-cung-cap'
+      path: `${EXTERNAL_BASE_URL}/nha-cung-cap`
     },
     {
       title: 'Nhập hàng từ NCC',
@@ -134,7 +135,7 @@ const menuRows = [
       icon: Receipt,
       color: 'text-lime-600',
       bgColor: 'bg-lime-50',
-      path: 'https://plasma-vn.vercel.app/nhap-hang'
+      path: `${EXTERNAL_BASE_URL}/nhap-hang`
     }
   ],
   // Hàng 4: Nhân sự (8 items)
@@ -212,7 +213,7 @@ const menuRows = [
       icon: Gift,
       color: 'text-yellow-600',
       bgColor: 'bg-yellow-50',
-      path: 'https://plasma-vn.vercel.app/danh-sach-khuyen-mai'
+      path: 'https://plasma-vn-acc.vercel.app/danh-sach-khuyen-mai'
     },
     {
       title: 'Tạo mã khuyến mãi',
@@ -220,7 +221,7 @@ const menuRows = [
       icon: Sparkles,
       color: 'text-amber-600',
       bgColor: 'bg-amber-50',
-      path: 'https://plasma-vn.vercel.app/tao-khuyen-mai'
+      path: 'https://plasma-vn-acc.vercel.app/tao-khuyen-mai'
     }
   ]
 ];
